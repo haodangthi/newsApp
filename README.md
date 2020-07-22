@@ -1,10 +1,14 @@
-#This is a simple app for displaying news 
+
+# This is a simple app for displaying news 
+
 
 # To run this project locally
 in your terminal type
 
 git clone https://github.com/haodangthi/newsApp.git
+
 npm install
+
 ng serve --open
 
 
