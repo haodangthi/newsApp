@@ -1,3 +1,17 @@
+#This is a simple app for displaying news 
+
+# To run this project locally
+in your terminal type
+
+git clone https://github.com/haodangthi/newsApp.git
+npm install
+ng serve --open
+
+
+
+
+
+
 # News
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
