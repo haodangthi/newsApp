@@ -16,10 +16,10 @@ export class NewsServiceService {
   news$:any= new BehaviorSubject([]);
   filteredNews$:any= new BehaviorSubject([]);
   
-  url='https://newsapi.org/v2/top-headlines?' +
-  'country=us&' +
-  'apiKey=b0dd17deb9b34f2abac8026a821a2b3b'
-  
+  // url='https://newsapi.org/v2/top-headlines?' +
+  // 'country=us&' +
+  // 'apiKey=b0dd17deb9b34f2abac8026a821a2b3b'
+  url2='http://localhost:8080/news'
 
   constructor(private http: HttpClient){
     this.getNews().subscribe((res:Response)=>{
@@ -31,6 +31,6 @@ export class NewsServiceService {
   }
   
   getNews(){
-    return this.http.get(this.url)
+    return this.http.get(this.url2)
   }
 }
