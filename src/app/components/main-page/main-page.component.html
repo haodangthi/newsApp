@@ -1,0 +1,22 @@
+<div class="search">
+    <mat-form-field appearance="outline" >
+        <mat-label>Search for news</mat-label>
+        <input #searchNews (input)='inputHandler(searchNews.value)' focus matInput placeholder="news title" [(ngModel)]="searchValue"  >
+        
+      </mat-form-field>
+</div>
+
+<div class='news'>
+    <li *ngFor="let post of shownNews;">
+        <mat-card routerLink='/newsPage/{{news.indexOf(post)}}'>
+            <img class='newsImg' src={{post.urlToImage}} alt="">
+            <h1>{{post.title}}</h1>
+        </mat-card>
+    </li>
+
+    
+</div>
+<div class='news'>
+    <mat-paginator [length]="this.news.length" [pageIndex]='this.currentPageIndex'[pageSize]="this.pageSize" [pageSizeOptions]="[5, 10]" (page)='onPageChange($event)'>
+    </mat-paginator>
+</div>
